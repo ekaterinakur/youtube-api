@@ -12,7 +12,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    getVideoList: (searchString) => dispatch(getVideoList(searchString)),
+    getVideoList: (searchString, nextPageToken) => dispatch(getVideoList(searchString, nextPageToken)),
   }
 }
 

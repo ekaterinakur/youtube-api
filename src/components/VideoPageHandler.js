@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
+import { getVideo } from '../redux/actions';
 import VideoPage from './VideoPage';
 
 function mapStateToProps(state) {
   return {
     video: state.video,
-    isLoading: state.isLoading
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return { }
+  return {
+    getVideo: (id) => dispatch(getVideo(id))
+  }
 }
 
 const VideoPageHandler = connect(mapStateToProps, mapDispatchToProps)(VideoPage);
